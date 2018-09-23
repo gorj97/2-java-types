@@ -4,9 +4,18 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        int digit;
+        int length;
+        String stringX = String.valueOf(x);
+        length = stringX.length();
+        do{
+            digit = x % 10;
+            x /= 10;
+            if((digit % 2) != 0) return "FALSE";
+            length--;
+        }while(length != 0);
 
-        return "FALSE";
+        return "TRUE";
     }
 
     public static void main(String[] args) {
